@@ -174,14 +174,6 @@ Open **`http://127.0.0.1:8000`** in your browser to access:
 
 ---
 
-## 📹 Video Walkthrough Outline
-
-When recording your submission walkthrough video (5–8 minutes), follow this structure:
-1. **0:00 - 1:00**: **Architecture Overview** — Present the Mermaid system diagram and explain the decoupled streaming pipeline.
-2. **1:00 - 2:30**: **Question 1 & 2 Demo** — Open Web UI Tab 1, run Call 2 (objection handling) and Call 3 (safe fallback), showing real-time RAG citations from Tab 2.
-3. **2:30 - 4:00**: **Question 3 Multilingual Demo** — Open Tab 3, demonstrate Taglish Bancassurance and Indonesian Multifinance bots, highlighting the 3 localization examples.
-4. **4:00 - 5:30**: **Question 4 Live Nudge Stream** — Open Tab 4, trigger "Start Real-Time Audio Streaming", show live compliance alerts popping up with sub-350ms latencies, and show noise suppression on Scenario 4.
-5. **5:30 - 6:30**: **Production Roadmap & 10x Scale** — Highlight the P50/P95 benchmark table and explain the edge gateway / Kafka / Redis distributed design.
 
 ---
 
