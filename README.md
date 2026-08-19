@@ -17,8 +17,7 @@ This repository contains the complete, production-grade implementation addressin
 4. [Question 3: Native-Language Voice Bots (Philippines & Indonesia)](#-question-3-native-language-voice-bots)
 5. [Question 4: Live Audio Insights & Nudge Streaming Pipeline](#-question-4-live-audio-insights--nudge-streaming-pipeline)
 6. [Installation & Quickstart Guide](#-installation--quickstart-guide)
-7. [Video Walkthrough Outline](#-video-walkthrough-outline)
-8. [Production Roadmap & 10x Scalability](#-production-roadmap--10x-scalability)
+7. [Production Roadmap & 10x Scalability](#-production-roadmap--10x-scalability)
 
 ---
 
