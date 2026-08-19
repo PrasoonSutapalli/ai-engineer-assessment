@@ -1,0 +1,42 @@
+{
+  "sample_size_chunks": 10,
+  "asr_transcription_ms": {
+    "min": 207.33,
+    "mean": 210.01,
+    "p50": 210.2,
+    "p95": 210.82,
+    "max": 210.82
+  },
+  "signal_extraction_ms": {
+    "min": 120.02,
+    "mean": 120.06,
+    "p50": 120.06,
+    "p95": 120.16,
+    "max": 120.16
+  },
+  "nudge_dispatch_ms": {
+    "min": 15.0,
+    "mean": 15.0,
+    "p50": 15.0,
+    "p95": 15.02,
+    "max": 15.02
+  },
+  "end_to_end_delivery_ms": {
+    "min": 342.37,
+    "mean": 345.07,
+    "p50": 345.28,
+    "p95": 345.94,
+    "max": 345.94
+  },
+  "false_positive_control": {
+    "total_detected_signals": 7,
+    "dispatched_nudges": 4,
+    "suppressed_noise_or_duplicate_signals": 3,
+    "suppression_efficiency_pct": 42.86,
+    "suppression_breakdown": {
+      "cooldown_suppressed": 1,
+      "low_confidence_suppressed": 0,
+      "vad_noise_suppressed": 2
+    }
+  }
+}

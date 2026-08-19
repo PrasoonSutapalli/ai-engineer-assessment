@@ -1,0 +1,173 @@
+[
+  {
+    "record_id": "kb_product_001",
+    "title": "Gold Care Comprehensive Plan Overview & Sum Insured Options",
+    "content": "The Aegis Gold Care Comprehensive Plan provides health insurance coverage ranging from $250,000 up to $1,000,000 Sum Insured (SI). It features comprehensive in-patient hospitalization, day-care procedures, pre-hospitalization (60 days), and post-hospitalization (180 days) coverage.",
+    "category": "product_specifications",
+    "source": "health_policy_gold_care.txt",
+    "version": "1.0",
+    "contains_pii": false,
+    "metadata": {
+      "min_sum_insured": 250000,
+      "max_sum_insured": 1000000,
+      "tags": [
+        "gold care",
+        "sum insured",
+        "plan tiers",
+        "coverage limits"
+      ]
+    }
+  },
+  {
+    "record_id": "kb_product_002",
+    "title": "Hospital Room Rent & ICU Sub-limits",
+    "content": "Room Rent Sub-limits under Gold Care Plan: For Sum Insured $250,000 to $500,000, normal room rent is capped at 1% of Sum Insured per day for standard private rooms, and Intensive Care Unit (ICU) charges are capped at 2% of Sum Insured per day. For Sum Insured $750,000 and above, there is zero room rent capping; single private air-conditioned or deluxe rooms are covered at actual incurred expenses with no proportionate deductions.",
+    "category": "product_specifications",
+    "source": "health_policy_gold_care.txt",
+    "version": "1.0",
+    "contains_pii": false,
+    "metadata": {
+      "room_rent_cap_pct": 1.0,
+      "icu_cap_pct": 2.0,
+      "zero_cap_threshold": 750000,
+      "tags": [
+        "room rent",
+        "icu",
+        "sub-limits",
+        "hospitalization",
+        "deluxe room"
+      ]
+    }
+  },
+  {
+    "record_id": "kb_policy_001",
+    "title": "Pre-Existing Diseases (PED) Waiting Period & 1-Year Buyback Rider",
+    "content": "The standard waiting period for Pre-Existing Diseases (PED) including Type 2 Diabetes, Hypertension, Thyroid conditions, and Asthma is 24 months (2 years) of continuous active coverage. Policyholders can opt for the optional 1-Year PED Buyback Rider at policy inception for a 15% additional premium, which reduces the waiting period to 12 months.",
+    "category": "policy_rules",
+    "source": "health_policy_gold_care.txt",
+    "version": "1.0",
+    "contains_pii": false,
+    "metadata": {
+      "standard_ped_waiting_months": 24,
+      "buyback_rider_waiting_months": 12,
+      "buyback_cost_pct": 15,
+      "tags": [
+        "pre-existing conditions",
+        "diabetes",
+        "hypertension",
+        "waiting period",
+        "ped buyback"
+      ]
+    }
+  },
+  {
+    "record_id": "kb_policy_002",
+    "title": "Maternity and Newborn Child Coverage Guidelines",
+    "content": "Maternity expenses are covered up to $50,000 per delivery (normal and caesarean) following a mandatory 24-month continuous waiting period. Newborn babies are covered from Day 1 for congenital and pediatric medical conditions under the mother's sum insured up to policy renewal.",
+    "category": "policy_rules",
+    "source": "health_policy_gold_care.txt",
+    "version": "1.0",
+    "contains_pii": false,
+    "metadata": {
+      "maternity_limit": 50000,
+      "maternity_waiting_months": 24,
+      "newborn_day_1_cover": true,
+      "tags": [
+        "maternity",
+        "newborn",
+        "pregnancy",
+        "delivery",
+        "congenital"
+      ]
+    }
+  },
+  {
+    "record_id": "kb_underwriting_001",
+    "title": "Eligibility Criteria, Entry Age, and Pre-Policy Medical Screening (PPMC)",
+    "content": "Eligibility & Underwriting: Minimum entry age is 18 years; maximum entry age for new enrollment is 65 years with guaranteed lifelong renewability. For applicants aged up to 55 years without declared chronic illnesses, no pre-policy medical checkup (PPMC) is required (tele-underwriting approval). For applicants aged 56 years and above, or applicants with chronic history (hypertension, diabetes, cardiac), a 100% company-sponsored medical checkup is mandatory.",
+    "category": "underwriting_rules",
+    "source": "underwriting_and_claims_guide.txt",
+    "version": "1.0",
+    "contains_pii": false,
+    "metadata": {
+      "min_age": 18,
+      "max_entry_age": 65,
+      "medical_check_age_threshold": 56,
+      "tags": [
+        "entry age",
+        "eligibility",
+        "medical checkup",
+        "ppmc",
+        "senior citizen"
+      ]
+    }
+  },
+  {
+    "record_id": "kb_claims_001",
+    "title": "Cashless Hospitalization Network & Non-Network Claim Settlement",
+    "content": "Cashless Settlement: Over 8,500+ empanelled partner network hospitals offer 100% cashless treatment with pre-authorization approved within 60 minutes. For non-network hospitals, policyholders can use the 'Cashless Anywhere' facility by notifying the insurer 48 hours before planned admission (or within 24 hours of emergency admission). Reimbursement claims are settled within 7 working days upon submission of hospital bills.",
+    "category": "claims_and_settlement",
+    "source": "underwriting_and_claims_guide.txt",
+    "version": "1.0",
+    "contains_pii": false,
+    "metadata": {
+      "network_hospitals_count": 8500,
+      "cashless_tat_mins": 60,
+      "reimbursement_tat_days": 7,
+      "tags": [
+        "cashless",
+        "non-network hospitals",
+        "claim process",
+        "reimbursement",
+        "cashless anywhere"
+      ]
+    }
+  },
+  {
+    "record_id": "kb_pricing_001",
+    "title": "Tobacco and Smoking Premium Loading & Cessation Removal",
+    "content": "Smoker Underwriting: Tobacco and nicotine users (cigarettes, vapes, cigars, smokeless tobacco) incur a 20% to 35% premium loading based on age and consumption. If the policyholder completes a certified smoking cessation program and tests negative for cotinine during policy renewal after 12 continuous months, the premium surcharge is fully removed.",
+    "category": "pricing_and_underwriting",
+    "source": "pre_existing_conditions_and_pricing_faq.txt",
+    "version": "1.0",
+    "contains_pii": false,
+    "metadata": {
+      "tobacco_loading_pct_range": [
+        20,
+        35
+      ],
+      "cessation_waiver_months": 12,
+      "tags": [
+        "smoker",
+        "tobacco",
+        "premium loading",
+        "surcharge",
+        "cessation"
+      ]
+    }
+  },
+  {
+    "record_id": "kb_objection_001",
+    "title": "Aegis Direct Pricing vs Third-Party Aggregator Comparison (Objection Handling)",
+    "content": "Value Proposition & Aggregator Price Discrepancy: Third-party aggregator portals advertise base teaser prices that exclude mandatory taxes, omit room rent restrictions, and mandate 20% co-payments. Aegis direct pricing provides zero room rent sub-limits, zero co-pay at network hospitals, built-in OPD and tele-consultation, and dedicated 60-minute cashless approvals, giving superior net financial protection.",
+    "category": "objection_handling",
+    "source": "pre_existing_conditions_and_pricing_faq.txt",
+    "version": "1.0",
+    "contains_pii": false,
+    "metadata": {
+      "objection_type": "high_price_vs_aggregators",
+      "key_differentiators": [
+        "zero_copay",
+        "no_room_rent_sublimit",
+        "60_min_cashless_tat",
+        "dedicated_rm"
+      ],
+      "tags": [
+        "price objection",
+        "aggregator comparison",
+        "cheaper online",
+        "why higher premium"
+      ]
+    }
+  }
+]

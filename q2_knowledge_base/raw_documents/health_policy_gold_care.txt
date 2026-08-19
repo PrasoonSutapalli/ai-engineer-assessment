@@ -1,0 +1,26 @@
+=== Aegis Health Shield - Policy Master Document ===
+[HEADER] Aegis General Insurance Company Ltd. | IRDAI Reg No. 145/2018 | All Rights Reserved.
+[NAV] Home | Products | Claims | About Us | Contact | Login | Agent Portal
+
+SECTION 1: PRODUCT SPECIFICATIONS - GOLD CARE COMPREHENSIVE
+Record ID: UNSTRUCTURED_RAW_01
+The Gold Care Comprehensive Plan provides health coverage from $250,000 up to $1,000,000 Sum Insured.
+
+Room Rent Sub-limits:
+- For Sum Insured $250,000 to $500,000: Room rent is capped at 1% of Sum Insured per day for standard private rooms, and 2% of Sum Insured per day for ICU charges.
+- For Sum Insured $750,000 and above: No room rent capping; single private air-conditioned room or deluxe room is covered at actuals.
+
+Pre-Existing Disease (PED) Waiting Period:
+- Standard waiting period for pre-existing conditions (including Type 2 Diabetes, Hypertension, Thyroid disorders, and Asthma) is exactly 24 months (2 years) of continuous coverage.
+- Optional 1-Year PED Buyback Rider is available at a 15% additional premium, reducing the waiting period to 12 months.
+
+Maternity and Newborn Cover:
+- Maternity expenses are covered up to $50,000 per delivery after a mandatory 24-month waiting period.
+- Newborn baby is automatically covered from Day 1 up to the sum insured until renewal.
+
+Sample Policyholder Records for Reference (INTERNAL CONFIDENTIAL):
+Policyholder: Johnathan Doe, Phone: +1-555-019-2834, Email: jdoe.private@example.com, SSN: 987-65-4321, Policy No: AG-88921-X.
+Policyholder: Maria Clara Santos, Phone: +63-917-555-0987, Email: maria.santos@emailph.net, TaxID: PH-8829103.
+
+[FOOTER] Aegis General Insurance Company Ltd. | IRDAI Reg No. 145/2018 | All Rights Reserved.
+[FOOTER] Aegis General Insurance Company Ltd. | IRDAI Reg No. 145/2018 | All Rights Reserved.

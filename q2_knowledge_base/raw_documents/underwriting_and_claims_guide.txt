@@ -1,0 +1,22 @@
+=== Aegis Underwriting Guidelines & Claims Operating Procedure ===
+[NAVIGATION BAR] Products > Underwriting Guidelines > Claim Settlement Protocol
+Document Version: 2026.1_Draft_Internal
+
+UNDERWRITING RULES & ELIGIBILITY:
+1. Entry Age Criteria:
+- Minimum entry age for primary policyholder is 18 years.
+- Maximum entry age for new policy enrollment is 65 years. Lifelong renewability is guaranteed once enrolled.
+- Dependent children are covered from age 91 days up to 25 years.
+
+2. Medical Checkup & Pre-Policy Screening:
+- For applicants aged up to 55 years with no declared adverse medical history: Tele-underwriting / No mandatory pre-policy medical checkup (PPMC) required.
+- For applicants aged 56 years and above, or any applicant declaring chronic conditions (Cardiac history, Stage 2 Hypertension, BMI > 32, or Insulin-dependent Diabetes): A 100% company-sponsored pre-policy medical screening is mandatory.
+
+3. Claims & Non-Network Hospital Cashless Reimbursement:
+- Network Hospitals: 100% Cashless hospitalization across 8,500+ empanelled partner hospitals with pre-authorization within 60 minutes.
+- Non-Network Hospitals: Cashless Anywhere facility is available if notification is submitted at least 48 hours prior to planned admission, or within 24 hours of emergency admission. For non-network reimbursement claims, standard claim processing turnaround time is 7 working days upon submission of original bills and discharge summary.
+
+INTERNAL AGENT NOTES:
+Agent Contact: Robert Vance (Regional Underwriting Head), Direct Mobile: +1-555-839-1122, Direct Email: rvance@aegisinsure-internal.corp.
+
+[NAVIGATION BAR] Products > Underwriting Guidelines > Claim Settlement Protocol

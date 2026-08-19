@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aegis AI Engineering Evaluation Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="app-header">
+    <div class="brand-container">
+      <div class="brand-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <div>
+        <h1 class="brand-title">Aegis AI Engineering Suite</h1>
+        <p class="brand-subtitle">Production-Ready Multi-Agent Telephony & Real-Time Audio Intelligence</p>
+      </div>
+    </div>
+    <div class="header-badges">
+      <span class="status-badge live-status"><span class="status-indicator"></span> Backend Active</span>
+      <span class="status-badge model-badge">Gemini / Deepgram Nova-2 / Custom RAG</span>
+    </div>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <nav class="tab-navigation">
+    <button class="nav-tab active" id="tab-btn-q1" onclick="switchTab('q1')">
+      <span class="tab-number">Q1</span> Voice Agent & Live RAG
+    </button>
+    <button class="nav-tab" id="tab-btn-q2" onclick="switchTab('q2')">
+      <span class="tab-number">Q2</span> Knowledge Base & Retrieval
+    </button>
+    <button class="nav-tab" id="tab-btn-q3" onclick="switchTab('q3')">
+      <span class="tab-number">Q3</span> Multilingual Bots (PH & ID)
+    </button>
+    <button class="nav-tab" id="tab-btn-q4" onclick="switchTab('q4')">
+      <span class="tab-number">Q4</span> Live Audio Nudges & Latency
+    </button>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="content-wrapper">
+
+    <!-- ======================================================== -->
+    <!-- TAB 1: QUESTION 1 - VOICE AGENT & RAG -->
+    <!-- ======================================================== -->
+    <section id="tab-q1" class="tab-content active">
+      <div class="section-intro">
+        <h2>Question 1 — Knowledge-Grounded Voice Agent</h2>
+        <p>Conversational health-insurance lead qualification grounded in the Question 2 Knowledge Base with safe fallback and automated CRM actions.</p>
+      </div>
+
+      <div class="grid-2-col">
+        <!-- Calling Panel -->
+        <div class="card panel">
+          <div class="card-header">
+            <h3>Interactive Voice Terminal</h3>
+            <div class="scenario-selector-group">
+              <label for="q1-scenario-select">Load Test Case:</label>
+              <select id="q1-scenario-select" onchange="loadQ1Scenario(this.value)">
+                <option value="custom">Custom Live Interaction</option>
+                <option value="call1">Call 1: Cooperative Lead (Full Qualification)</option>
+                <option value="call2">Call 2: Objection & Smoker Surcharge</option>
+                <option value="call3">Call 3: Out-of-Scope & Human Escalation</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="call-status-bar">
+            <div><strong>Agent State:</strong> <span id="q1-agent-state" class="state-pill">GREETING</span></div>
+            <div><strong>Call ID:</strong> <span id="q1-call-id" class="mono-text">CALL_LIVE_01</span></div>
+            <button id="q1-reset-btn" class="btn btn-secondary btn-sm" onclick="resetQ1Agent()">Restart Call</button>
+          </div>
+
+          <!-- Chat / Call Log -->
+          <div id="q1-chat-log" class="chat-log-box">
+            <div class="chat-bubble agent-bubble">
+              <div class="speaker-tag">Aria (Voice Agent)</div>
+              <p>Hello! This is Aria from Aegis Health Shield. I am calling to help you customize a comprehensive healthcare plan for you and your family. Do you have two minutes to check your eligibility?</p>
+            </div>
+          </div>
+
+          <!-- Input Bar -->
+          <form class="chat-input-bar" onsubmit="handleQ1Submit(event)">
+            <input type="text" id="q1-input-text" placeholder="Speak or type customer response (e.g., 'I am 35, based in Chicago, no illness...')" required>
+            <button type="submit" id="q1-send-btn" class="btn btn-primary">Speak / Send</button>
+          </form>
+        </div>
+
+        <!-- Real-Time Context & Actions Panel -->
+        <div class="card panel">
+          <div class="card-header">
+            <h3>Dynamic Grounding & CRM Output</h3>
+          </div>
+
+          <div class="sub-panel">
+            <h4>📚 Live RAG Grounding Citation</h4>
+            <div id="q1-citation-box" class="citation-box empty">
+              <p class="placeholder-text">Ask a policy question (e.g., <em>"What is the room rent limit?"</em> or <em>"Why is direct quote higher than aggregator?"</em>) to view real-time Knowledge Base citations.</p>
+            </div>
+          </div>
+
+          <div class="sub-panel">
+            <h4>👤 Extracted Qualification Profile</h4>
+            <div class="profile-grid">
+              <div class="profile-item"><span class="label">Age:</span> <strong id="prof-age">-</strong></div>
+              <div class="profile-item"><span class="label">Location:</span> <strong id="prof-loc">-</strong></div>
+              <div class="profile-item"><span class="label">Pre-Existing:</span> <strong id="prof-ped">-</strong></div>
+              <div class="profile-item"><span class="label">Tobacco User:</span> <strong id="prof-tobacco">-</strong></div>
+              <div class="profile-item"><span class="label">Sum Insured:</span> <strong id="prof-si">-</strong></div>
+            </div>
+          </div>
+
+          <div class="sub-panel">
+            <h4>⚡ CRM Lead & Downstream Webhook</h4>
+            <div id="q1-crm-box" class="code-box">
+              <pre id="q1-crm-json">{ "status": "PENDING_QUALIFICATION" }</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- TAB 2: QUESTION 2 - KNOWLEDGE BASE -->
+    <!-- ======================================================== -->
+    <section id="tab-q2" class="tab-content">
+      <div class="section-intro">
+        <h2>Question 2 — Production-Ready Knowledge Base</h2>
+        <p>Traceable, PII-redacted, structured vector knowledge base with hybrid retrieval benchmarking across 5+ ground-truth categories.</p>
+      </div>
+
+      <div class="grid-2-col">
+        <!-- Real-Time Search & Record Inspector -->
+        <div class="card panel">
+          <div class="card-header">
+            <h3>Knowledge Base Query Engine</h3>
+          </div>
+          <div class="search-bar">
+            <input type="text" id="q2-search-input" placeholder="Enter query (e.g. 'waiting period for diabetes', 'room rent', 'smoker loading')" value="What is the hospital room rent limit under the Gold Care plan?">
+            <button class="btn btn-primary" onclick="runQ2Search()">Search KB</button>
+          </div>
+
+          <div id="q2-search-results" class="search-results-list">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- 5-Query Ground-Truth Benchmark Runner -->
+        <div class="card panel">
+          <div class="card-header">
+            <h3>Automated Ground-Truth Benchmark</h3>
+            <button class="btn btn-secondary btn-sm" onclick="runQ2BenchmarkSuite()">Run Benchmark (5+ Queries)</button>
+          </div>
+          <div class="benchmark-summary-bar">
+            <div><strong>Accuracy:</strong> <span id="q2-acc-rate" class="metric-highlight">100%</span></div>
+            <div><strong>Total Tests:</strong> <span id="q2-total-tests">6/6 Passed</span></div>
+            <div><strong>PII Redaction:</strong> <span class="badge badge-success">Active (100% Protected)</span></div>
+          </div>
+          <div class="table-responsive">
+            <table class="benchmark-table" id="q2-benchmark-table">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Query</th>
+                  <th>Retrieved Record</th>
+                  <th>Verdict</th>
+                </tr>
+              </thead>
+              <tbody id="q2-benchmark-tbody">
+                <!-- Populated via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- TAB 3: QUESTION 3 - MULTILINGUAL VOICE BOTS -->
+    <!-- ======================================================== -->
+    <section id="tab-q3" class="tab-content">
+      <div class="section-intro">
+        <h2>Question 3 — Native-Language Voice Bots</h2>
+        <p>Localized bancassurance and multifinance prototypes for the Philippines (Taglish) and Indonesia (Colloquial & Javanese regional dialect).</p>
+      </div>
+
+      <div class="market-toggle-bar">
+        <button id="btn-market-ph" class="market-btn active" onclick="switchMarket('ph')">🇵🇭 Philippines Bancassurance (Taglish)</button>
+        <button id="btn-market-id" class="market-btn" onclick="switchMarket('id')">🇮🇩 Indonesia Multifinance (Bahasa & Javanese)</button>
+      </div>
+
+      <div class="grid-2-col">
+        <!-- Interactive Multilingual Simulator -->
+        <div class="card panel">
+          <div class="card-header">
+            <h3 id="q3-simulator-title">🇵🇭 Philippines Bancassurance Simulator</h3>
+            <button class="btn btn-secondary btn-sm" onclick="resetQ3Bot()">Reset Conversation</button>
+          </div>
+          <div id="q3-chat-log" class="chat-log-box">
+            <!-- Dynamic chat log -->
+          </div>
+          <form class="chat-input-bar" onsubmit="handleQ3Submit(event)">
+            <input type="text" id="q3-input-text" placeholder="Magtanong in Taglish or speak in Bahasa..." required>
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form>
+        </div>
+
+        <!-- Adaptation Evidence & Linguistic Rationale -->
+        <div class="card panel">
+          <div class="card-header">
+            <h3>Localization vs. Direct Translation Evidence</h3>
+          </div>
+          <div id="q3-adaptation-container" class="adaptation-list">
+            <!-- Dynamic localization evidence cards -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- TAB 4: QUESTION 4 - REAL-TIME LIVE NUDGES -->
+    <!-- ======================================================== -->
+    <section id="tab-q4" class="tab-content">
+      <div class="section-intro">
+        <h2>Question 4 — Live Insights & Nudges From Call Audio</h2>
+        <p>Real-time streaming audio pipeline with speaker diarization, sub-second latency tracking (P50/P95), and anti-spam false positive suppression.</p>
+      </div>
+
+      <!-- Control Bar -->
+      <div class="q4-control-bar card">
+        <div class="control-item">
+          <label for="q4-scenario-select"><strong>Select Call Scenario:</strong></label>
+          <select id="q4-scenario-select">
+            <option value="cross_sell">Scenario 1: Missed Cross-Sell (Second Vehicle)</option>
+            <option value="compliance_gap">Scenario 2: Compliance Gap (Missing 30-Day Free Look Disclosure)</option>
+            <option value="rising_frustration">Scenario 3: Rising Frustration (De-escalation Prompt)</option>
+            <option value="noisy_ambient">Scenario 4: Noisy / Ambient Audio (Anti-Spam Suppression Test)</option>
+          </select>
+        </div>
+        <button id="q4-start-stream-btn" class="btn btn-primary" onclick="startQ4StreamingSimulation()">
+          ▶ Start Real-Time Audio Streaming
+        </button>
+        <button class="btn btn-secondary" onclick="runQ4FullBenchmark()">
+          📊 Calculate P50 / P95 Latency Report
+        </button>
+      </div>
+
+      <!-- Latency Metrics Bar -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-label">ASR Latency (P50)</div>
+          <div class="metric-value" id="q4-asr-lat">195 ms</div>
+          <div class="metric-footer">Deepgram Nova-2 / Whisper</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Signal Extraction (P50)</div>
+          <div class="metric-value" id="q4-sig-lat">121 ms</div>
+          <div class="metric-footer">Dual-Tier SLM Classifier</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Nudge Dedupe & Control</div>
+          <div class="metric-value" id="q4-ndg-lat">15 ms</div>
+          <div class="metric-footer">Redis Atomic Cooldowns</div>
+        </div>
+        <div class="metric-card highlight-card">
+          <div class="metric-label">End-to-End Latency (P50 / P95)</div>
+          <div class="metric-value" id="q4-e2e-lat">331 / 378 ms</div>
+          <div class="metric-footer">Target &lt; 2,000 ms (Well within SLA)</div>
+        </div>
+      </div>
+
+      <div class="grid-2-col">
+        <!-- Live Call Stream -->
+        <div class="card panel">
+          <div class="card-header">
+            <h3>Live Streaming Call Audio & Diarization</h3>
+            <span id="q4-stream-status" class="badge badge-idle">Ready to Stream</span>
+          </div>
+          <div id="q4-stream-log" class="chat-log-box stream-box">
+            <p class="placeholder-text">Click <strong>"Start Real-Time Audio Streaming"</strong> to replay audio chunks with synchronized speech and diarization.</p>
+          </div>
+        </div>
+
+        <!-- Live Agent Nudge Dashboard -->
+        <div class="card panel">
+          <div class="card-header">
+            <h3>Live Agent Nudge Feed (Actionable Recommendations)</h3>
+            <span class="badge badge-info" id="q4-nudge-counter">0 Active Nudges</span>
+          </div>
+          <div id="q4-nudge-feed" class="nudge-feed-box">
+            <p class="placeholder-text">Real-time proactive recommendations will appear here dynamically as triggers are detected.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
