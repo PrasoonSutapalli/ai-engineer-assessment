@@ -61,7 +61,7 @@ flowchart TB
 
 ---
 
-## 🎙 Question 1: Knowledge-Grounded Voice Agent
+## Knowledge-Grounded Voice Agent
 
 * **Chosen Domain**: **Aegis Health Shield — Comprehensive Health Insurance Qualification & Policy Advisory**.
 * **Key Implementation Highlights**:
@@ -76,7 +76,7 @@ flowchart TB
 
 ---
 
-## 📚 Question 2: Production-Ready Knowledge Base
+## Production-Ready Knowledge Base
 
 * **Ingestion & Data Sanitization Pipeline ([`q2_knowledge_base/cleaner.py`](q2_knowledge_base/cleaner.py))**:
   * Strips HTML tags, headers, footers, and redundant navigation menus.
@@ -101,7 +101,7 @@ flowchart TB
 
 ---
 
-## 🌏 Question 3: Native-Language Voice Bots
+## Native-Language Voice Bots
 
 ### 🇵🇭 Philippines Bot (Bancassurance & Life Insurance)
 * **Natural Taglish Code-Switching**: Implements realistic Metro Manila banking dialogue mixing English technical terms (*premium, policy, beneficiary, rider, lapse, auto-debit*) with Tagalog conversational syntax.
@@ -117,7 +117,7 @@ flowchart TB
 
 ---
 
-## ⚡ Question 4: Live Audio Insights & Nudge Streaming Pipeline
+## Live Audio Insights & Nudge Streaming Pipeline
 
 * **Real-Time Streaming Engine ([`q4_live_nudges/streaming_pipeline.py`](q4_live_nudges/streaming_pipeline.py))**:
   * Ingests chunked audio in real time with continuous ASR simulation and dual-channel speaker diarization.
