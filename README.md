@@ -1,4 +1,4 @@
-# Aegis AI Engineering Suite — Production Multi-Agent Telephony & Real-Time Audio Intelligence
+# VoiceNexus AI — Production Multi-Agent Telephony & Real-Time Audio Intelligence
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Retrieval Accuracy](https://img.shields.io/badge/Q2_RAG_Accuracy-100%25-brightgreen.svg)](#)
