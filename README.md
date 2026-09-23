@@ -1,7 +1,6 @@
 # Aegis AI Engineering Suite — Production Multi-Agent Telephony & Real-Time Audio Intelligence
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Assessment](https://img.shields.io/badge/AI_Engineer_Assessment-100%25_Complete-success.svg)](#)
 [![Retrieval Accuracy](https://img.shields.io/badge/Q2_RAG_Accuracy-100%25-brightgreen.svg)](#)
 [![End-to-End Latency](https://img.shields.io/badge/Q4_E2E_Latency_P50-345ms-blueviolet.svg)](#)
 
@@ -12,10 +11,10 @@ This repository contains the complete, production-grade implementation addressin
 ## 📑 Table of Contents
 
 1. [System Architecture](#-system-architecture)
-2. [Question 1: Knowledge-Grounded Voice Agent](#-question-1-knowledge-grounded-voice-agent)
-3. [Question 2: Production-Ready Knowledge Base](#-question-2-production-ready-knowledge-base)
-4. [Question 3: Native-Language Voice Bots (Philippines & Indonesia)](#-question-3-native-language-voice-bots)
-5. [Question 4: Live Audio Insights & Nudge Streaming Pipeline](#-question-4-live-audio-insights--nudge-streaming-pipeline)
+2. [Knowledge-Grounded Voice Agent](#-question-1-knowledge-grounded-voice-agent)
+3. [Production-Ready Knowledge Base](#-question-2-production-ready-knowledge-base)
+4. [Native-Language Voice Bots (Philippines & Indonesia)](#-question-3-native-language-voice-bots)
+5. [Live Audio Insights & Nudge Streaming Pipeline](#-question-4-live-audio-insights--nudge-streaming-pipeline)
 6. [Installation & Quickstart Guide](#-installation--quickstart-guide)
 7. [Production Roadmap & 10x Scalability](#-production-roadmap--10x-scalability)
 
